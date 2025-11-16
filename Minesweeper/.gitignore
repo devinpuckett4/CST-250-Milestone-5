@@ -1,0 +1,16 @@
+﻿# Build artifacts
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# IDE/OS extras
+.vscode/
+.idea/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
