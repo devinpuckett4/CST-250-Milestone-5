@@ -40,6 +40,7 @@ Figure 2: UML Class Diagram
 This diagram lays out how my Minesweeper game is organized using separate models, forms, and services. BoardModel and CellModel handle the core game data, including the grid, timer, difficulty, neighbors, and whether a cell is flagged, revealed, or a reward. GameState and GameStat track whether the player is still playing, won, or lost, and store the final results like score, time, and name. FormStart, FormGame, Form3, and Form4 control the user experience: starting the game, playing on the grid, entering the player’s name, and viewing or managing high scores. The IBoardOperations interface and BoardService class sit in the middle to perform actions like setting bombs, revealing cells, counting neighbors, toggling flags, and calculating the final score, keeping the game logic separate from the UI and easier to manage.
 
 
+
 Low Fidelity
 
   
@@ -47,6 +48,7 @@ Low Fidelity
 Figure 3: Screenshot of Build Success
 
 This screenshot shows my full Minesweeper solution building successfully from the command line. After navigating into the Minesweeper folder, I run dotnet build and all projects compile with no errors. The Models and BLL projects succeed first, confirming that my core data structures and game logic are solid. The ConsoleApp, Tests, and WinForms projects all build cleanly as well, which means both interfaces and my automated tests are wired up correctly. Seeing “Build succeeded” at the bottom for every layer confirms the application is stable and ready to run or demonstrate.
+
 
 
 
@@ -79,8 +81,7 @@ This screenshot shows the results of running my automated tests for the Mineswee
 Figure 5: Screenshot of Setup Form
 
  
-This screenshot shows the Minesweeper setup screen configured for a large 24 x 24 board. The top slider is pushed all the way to the right, clearly displaying the selected board size beside it so the player knows they’re choosing a more advanced grid. The difficulty slider is set to 1, letting me demonstrate that players can combine a big board with an easier bomb density if they want more time to think. The layout keeps everything simple with just two sliders and a clear Start Game button so there’s no confusion about how to begin. It highlights that my game scales from small beginner boards up to much larger challenges using the same clean, user-friendly setup form.
-
+This screenshot shows the setup screen for my Minesweeper game. At the top, there is a slider that lets the player choose the board size, and on the right it shows the current size as 10 x 10. Under that is another slider for the difficulty level, which is currently set to 1 so the player can start with an easier game. At the bottom there are two big buttons: “Start Game” to begin playing with the selected settings and “High Scores” to jump straight to the score history screen. The layout is simple so players can quickly pick their settings and get into the game.
 
 
 
@@ -120,10 +121,46 @@ This screenshot shows the lose screen on my larger 24x24 Minesweeper board. The 
 
 
 
-Figure 6: Screenshot of Error Handling
+Figure 9: Screenshot of Error Handling
 
  
 This screenshot shows my game catching a bad command. I typed 111 on purpose, and the app didn’t crash, it told me to enter three parts: row, col, action, with an example. That message comes from the checks I added in the main loop for empty input, token count, and parsing numbers. It reprompts right away, so I can try again without losing my place. This is quick proof that my input validation is working the way it should.
+
+
+
+
+
+
+
+
+
+
+
+
+Figure10: Screenshot of High Scores
+
+ 
+This screenshot shows the High Scores window for my Minesweeper game. At the top there is a simple menu with options for File and Sort, and below that the high scores are displayed in a clean table. Each row shows the player’s name, their score, how long the game took, and the date they earned it. My name, Devin, is currently selected at the top with the highest score in the list, and you can see other players like Samantha, Steve, Brandon, and Harry underneath. This screen lets players quickly compare their results and see when they achieved their best runs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
